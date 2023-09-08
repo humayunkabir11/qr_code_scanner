@@ -1,12 +1,14 @@
 import 'package:get/get.dart';
+import 'package:qr_code_scanner/view/screens/url/url_screen.dart';
 
 class AppRoutes{
+
   static const String splashScreen = "/splash_screen";
   static const String homeScreen = "/splash_screen";
   static const String generateScreen = "/generate_screen";
   static const String scanScreen = "/scan_screen";
   static const String profileScreen = "/profile_screen";
-  static const String urlScreen = "/uri_screen";
+  static const String urlScreen = "/url_screen";
   static const String urlsScreen = "/urls_screen";
   static const String textScreen = "/text_screen";
   static const String contactScreen = "/contact_screen";
@@ -20,9 +22,7 @@ class AppRoutes{
 
 
   static List<GetPage>  routes = [
-
-    // GetPage(name: splashScreen, page: SplashScreen())
-
+    GetPage(name: urlScreen, page: ()=> const UrlScreen())
   ];
 }
 

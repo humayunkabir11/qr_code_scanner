@@ -36,7 +36,8 @@ class CustomText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(left: left, right: right, top: top, bottom: bottom),
-      child: Text(textAlign: textAlign,
+      child: Text(
+        textAlign: textAlign,
         text,maxLines: maxLines,
         overflow: overflow,
         style: GoogleFonts.poppins(

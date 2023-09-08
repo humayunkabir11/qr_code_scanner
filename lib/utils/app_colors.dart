@@ -4,7 +4,7 @@ class AppColors{
   static const whiteColor = Color(0xffffffff);
   static const b1 = Color(0xff333333);
   static const b5 = Color(0xffCECECE);
-  static const reb = Color(0xffFF0B0B);
+  static const red = Color(0xffFF0B0B);
   static const yellow = Color(0xffFF9900);
   static const blue = Color(0xff0094FF);
   static const violate = Color(0xff8000FF);

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/utils/app_colors.dart';
 import 'package:qr_code_scanner/view/widgets/text/custom_text.dart';
-
 class CustomButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String titleText;
@@ -20,7 +19,6 @@ class CustomButton extends StatelessWidget {
   final TextAlign textAlign;
   final Color buttonBorderColor;
   final double ?elevation;
-
    const CustomButton(
       {
         super.key,

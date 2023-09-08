@@ -27,6 +27,7 @@ class CustomTextField extends StatefulWidget {
     this.prefixIconColor,
     this.prefixIconSrc,
     this.readOnly = false,
+    this.borderWidth=1,
     super.key
   }
       );
@@ -48,12 +49,14 @@ class CustomTextField extends StatefulWidget {
   final Color? suffixIconColor;
   final Widget? suffixIcon;
   final double fieldBorderRadius;
+  final double borderWidth;
   final Color fieldBorderColor;
   final bool isPassword;
   final bool isPrefixIcon;
   final String ?prefixIconSrc;
   final Color ? prefixIconColor;
   final bool readOnly;
+
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -100,15 +103,15 @@ class _CustomTextFieldState extends State<CustomTextField> {
         suffixIconColor: widget.suffixIconColor,
         border: UnderlineInputBorder(
             borderRadius: BorderRadius.circular(widget.fieldBorderRadius),
-            borderSide: BorderSide(color: widget.fieldBorderColor, width: 1),
+            borderSide: BorderSide(color: widget.fieldBorderColor, width: widget.borderWidth),
             ),
         focusedBorder: UnderlineInputBorder(
             borderRadius: BorderRadius.circular(widget.fieldBorderRadius),
-            borderSide: BorderSide(color: widget.fieldBorderColor, width: 1),
+            borderSide: BorderSide(color: widget.fieldBorderColor, width: widget.borderWidth),
            ),
         enabledBorder: UnderlineInputBorder(
             borderRadius: BorderRadius.circular(widget.fieldBorderRadius),
-            borderSide: BorderSide(color: widget.fieldBorderColor, width: 1),
+            borderSide: BorderSide(color: widget.fieldBorderColor, width:  widget.borderWidth),
             ),
       ),
     );
