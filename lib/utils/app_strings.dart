@@ -1,0 +1,49 @@
+class AppStrings{
+  static const String lOGO = "LOGO";
+  static const String settings = "Settings";
+  static const String scan = "Scan";
+  static const String history = "History";
+  static const String generate = "Generate";
+  static const String selectCategory = "Select your category";
+  static const String url = "Url";
+  static const String urls = "Urls";
+  static const String text = "Text";
+  static const String contact = "Contact";
+  static const String pdf = "Pdf";
+  static const String app = "App";
+  static const String email = "Email";
+  static const String phone = "Phone";
+  static const String sms = "Sms";
+  static const String findQrCode = "Find a QR code";
+  static const String scanHistory = "Scan History";
+  static const String favorite = "Favorite";
+  static const String aboutUs = "About Us";
+  static const String enterURL = "Enter URL";
+  static const String linkOpenWhenScanned = "Link open when scanned";
+  static const String selectColor = "Select Color";
+  static const String selectShape = "Select Shape";
+  static const String create = "Create";
+  static const String enterURL1 = "Enter URL-1";
+  static const String enterURL2 = "Enter URL-2";
+  static const String enterURL3 = "Enter URL-3";
+  static const String enterYourText = "Enter your text";
+  static const String yourName = "Your name";
+  static const String emailAddress = "Email address";
+  static const String address = "Address";
+  static const String website = "Website";
+  static const String pDF = "PDF";
+  static const String uploadPdf = "Upload Pdf";
+  static const String androidAppURL = "Android app URL";
+  static const String iOSAppURL = "iOS app URL";
+  static const String scanURLForOtherDevice = "Scan URL for other device";
+  static const String emailContent = "Email Content";
+  static const String enterPhoneNumber = "Enter Phone Number";
+  static const String sMS = "SMS";
+  static const String enterMessage = "Enter Message";
+  static const String addToFavourite = "Add to favourite";
+  static const String download = "Download";
+  static const String saveForLater = "Save for later";
+  static const String share = "Share";
+
+
+}
