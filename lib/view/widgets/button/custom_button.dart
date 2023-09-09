@@ -40,10 +40,6 @@ class CustomButton extends StatelessWidget {
         this.rightPadding=0,
         this.borderWidth =0,
       });
-
-
-
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(

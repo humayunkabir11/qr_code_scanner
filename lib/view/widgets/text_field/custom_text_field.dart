@@ -20,7 +20,7 @@ class CustomTextField extends StatefulWidget {
     this.fillColor = AppColors.whiteColor,
     this.suffixIcon,
     this.suffixIconColor,
-    this.fieldBorderRadius = 8,
+    this.fieldBorderRadius = 0,
     this.fieldBorderColor = AppColors.whiteColor,
     this.isPassword = false,
     this.isPrefixIcon = false,
@@ -85,21 +85,12 @@ class _CustomTextFieldState extends State<CustomTextField> {
         hintStyle: widget.hintStyle,
         fillColor: widget.fillColor,
         filled: true,
-        prefixIcon: widget.isPrefixIcon ? Padding(
-          padding:   EdgeInsetsDirectional.only(start: 16, top: 1, bottom: 1, end: 16),
-          child: SvgPicture.asset(widget.prefixIconSrc ?? ""),
-        ) : null,
+        prefixIcon: widget.isPrefixIcon ? SvgPicture.asset(widget.prefixIconSrc ?? "") : null,
         prefixIconColor: widget.prefixIconColor,
         suffixIcon: widget.isPassword ? GestureDetector(
             onTap: toggle,
-            child: Padding(
-              padding:  const EdgeInsetsDirectional.only(start: 16, top: 1, bottom: 1, end: 16),
-              child: widget.suffixIcon,
-            )
-        ) : Padding(
-          padding: const EdgeInsetsDirectional.only(start: 16, top: 16, bottom: 16, end: 16),
-          child: widget.suffixIcon,
-        ),
+            child: widget.suffixIcon
+        ) : widget.suffixIcon,
         suffixIconColor: widget.suffixIconColor,
         border: UnderlineInputBorder(
             borderRadius: BorderRadius.circular(widget.fieldBorderRadius),

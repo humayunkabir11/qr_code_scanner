@@ -10,6 +10,6 @@ class AppColors{
   static const violate = Color(0xff8000FF);
   static const majenda = Color(0xffFF00B8);
   static const blueSky = Color(0xff00E0FF);
-  static const rainBo = Color(0xffE4F4F8);
+  static const rainBo = Color(0xffe81416);
   static const b2 = Color(0xff5A5A5A);
 }
