@@ -18,6 +18,7 @@ class _SrlScreenState extends State<UrlScreen> {
   List<dynamic> colors = [
       AppColors.b1,AppColors.themeColor,AppColors.red,AppColors.yellow,AppColors.blue,AppColors.violate,AppColors.majenda,AppColors.blueSky,AppColors.rainBo
   ];
+  List qrImages = [AppImages.qrThreeImage,AppImages.qrFacebookImage,AppImages.qrFacebookImage,AppImages.qrYoutubeImage,AppImages.qrYoutubeImage];
   bool changColor = true;
   int selectedColor = 0;
   @override
@@ -74,7 +75,6 @@ class _SrlScreenState extends State<UrlScreen> {
                   children: List.generate(colors.length, (index) => GestureDetector(
                     onTap: (){
                       setState(() {
-                        changColor = !changColor;
                         selectedColor = index;
                       });
                     },
@@ -102,13 +102,15 @@ class _SrlScreenState extends State<UrlScreen> {
               // Image.asset(AppImages.qr2),
                Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  CustomImage(imageSrc: AppImages.qrOneImage,imageType: ImageType.svg,),
-                  CustomImage(imageSrc: AppImages.qrTwoImage,imageType: ImageType.svg,),
-                  CustomImage(imageSrc: AppImages.qrThreeImage,imageType: ImageType.svg,),
-                  CustomImage(imageSrc: AppImages.qrFacebookImage,imageType: ImageType.svg,),
-                  CustomImage(imageSrc: AppImages.qrYoutubeImage,imageType: ImageType.svg,),
-                ],
+
+
+                children: List.generate(qrImages.length, (index) =>CustomImage(imageSrc: qrImages[index],imageType: ImageType.svg,imageColor: colors[selectedColor],),)
+
+                  // CustomImage(imageSrc: AppImages.qrTwoImage,imageType: ImageType.svg,),
+                  // CustomImage(imageSrc: AppImages.qrThreeImage,imageType: ImageType.svg,),
+                  // CustomImage(imageSrc: AppImages.qrFacebookImage,imageType: ImageType.svg,),
+                  // CustomImage(imageSrc: AppImages.qrYoutubeImage,imageType: ImageType.svg,),
+
               ),
 
               const SizedBox(height: 50,),
