@@ -42,11 +42,21 @@ class _SelectColorSectionState extends State<TextSelectColor> {
                   },
                   child: Container(
                     margin: const EdgeInsetsDirectional.only(end: 8),
-                    height: 30,
-                    width: 30,
-                    decoration:  BoxDecoration(
-                      color:  colors[index],
-                      shape: BoxShape.circle,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      // border: Border.all(width: 2,color: AppColors.themeColor)
+                      border: Border(
+                        bottom: BorderSide(width: 2, color: selectedColor==index? colors[index]:AppColors.whiteColor),
+                      ),
+                    ),
+                    child: Container(
+
+                      height: 30,
+                      width: 30,
+                      decoration:  BoxDecoration(
+                        color:  colors[index],
+                        shape: BoxShape.circle,
+                      ),
                     ),
                   ),
                 )

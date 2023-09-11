@@ -20,4 +20,5 @@ class AppIcons{
   static const String smsIcon="$basePath/sms_icon.svg";
   static const String textIcon="$basePath/text_icon.svg";
   static const String urlIcon="$basePath/url_icon.svg";
+  static const String logoIcon="$basePath/logo.svg";
 }

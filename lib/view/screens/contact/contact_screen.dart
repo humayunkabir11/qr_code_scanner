@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:qr_code_scanner/utils/app_colors.dart';
 import 'package:qr_code_scanner/utils/app_strings.dart';
+import 'package:qr_code_scanner/view/screens/bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:qr_code_scanner/view/screens/contact/inner_widgets/all_text_fields.dart';
 import 'package:qr_code_scanner/view/screens/contact/inner_widgets/contaco_select_colors.dart';
 import 'package:qr_code_scanner/view/widgets/appbar/app_bar.dart';
@@ -74,6 +75,7 @@ class _ContactScreenState extends State<ContactScreen> {
             ],
           ),
         ),
+        // bottomNavigationBar:const CustomNavBar(currentIndex: 1) ,
       ),
     );
   }

@@ -5,6 +5,7 @@ import 'package:qr_code_scanner/utils/app_colors.dart';
 import 'package:qr_code_scanner/utils/app_icons.dart';
 import 'package:qr_code_scanner/utils/app_images.dart';
 import 'package:qr_code_scanner/utils/app_strings.dart';
+import 'package:qr_code_scanner/view/screens/bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:qr_code_scanner/view/screens/pdf/inner_widgets/pdf_select_color.dart';
 import 'package:qr_code_scanner/view/widgets/appbar/app_bar.dart';
 import 'package:qr_code_scanner/view/widgets/button/custom_button.dart';
@@ -95,6 +96,7 @@ class _PdfScreenState extends State<PdfScreen> {
             ],
           ),
         ),
+        // bottomNavigationBar:const CustomNavBar(currentIndex: 1) ,
       ),
     );
   }

@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 import 'package:qr_code_scanner/core/app_route/app_route.dart';
 import 'package:qr_code_scanner/utils/app_colors.dart';
 import 'package:qr_code_scanner/utils/app_icons.dart';
-
 import 'package:qr_code_scanner/utils/app_strings.dart';
+import 'package:qr_code_scanner/view/screens/bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:qr_code_scanner/view/widgets/appbar/app_bar.dart';
 import 'package:qr_code_scanner/view/widgets/container/custom_container.dart';
 import 'package:qr_code_scanner/view/widgets/image/custom_image.dart';
@@ -60,7 +60,7 @@ int selectorCategory = 0;
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar:CustomAppBar(
+      appBar:const CustomAppBar(
         appBarContent: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -108,55 +108,55 @@ int selectorCategory = 0;
                     );
                     if(index==0){
 
-                      Future.delayed(const Duration(seconds: 2),() {
+                      Future.delayed(const Duration(milliseconds: 100),() {
                         Get.toNamed(AppRoutes.urlScreen);
                       }
                       );
                     }
                     else if(index==1){
-                      Future.delayed(const Duration(seconds: 2),() {
+                      Future.delayed(const Duration(milliseconds: 100),() {
                         Get.toNamed(AppRoutes.urlsScreen);
                        }
                       );
                     }
                     else if(index==2){
-                      Future.delayed(const Duration(seconds: 2),() {
+                      Future.delayed(const Duration(milliseconds: 100),() {
                         Get.toNamed(AppRoutes.textScreen);
                        }
                       );
                     }
                     else if(index==3){
-                      Future.delayed(const Duration(seconds: 2),() {
+                      Future.delayed(const Duration(milliseconds: 100),() {
                         Get.toNamed(AppRoutes.contactScreen);
                        }
                       );
                     }
                     else if(index==4){
-                      Future.delayed(const Duration(seconds: 2),() {
+                      Future.delayed(const Duration(milliseconds: 100),() {
                         Get.toNamed(AppRoutes.pdfScreen);
                        }
                       );
                     }
                     else if(index==5){
-                      Future.delayed(const Duration(seconds: 2),() {
+                      Future.delayed(const Duration(milliseconds: 100),() {
                         Get.toNamed(AppRoutes.appScreen);
                        }
                       );
                     }
                     else if(index==6){
-                      Future.delayed(const Duration(seconds: 2),() {
+                      Future.delayed(const Duration(milliseconds: 100),() {
                         Get.toNamed(AppRoutes.emailScreen);
                        }
                       );
                     }
                     else if(index==7){
-                      Future.delayed(const Duration(seconds: 2),() {
+                      Future.delayed(const Duration(milliseconds: 100),() {
                         Get.toNamed(AppRoutes.phoneScreen);
                        }
                       );
                     }
                     else if(index==8){
-                      Future.delayed(const Duration(seconds: 2),() {
+                      Future.delayed(const Duration(milliseconds: 100),() {
                         Get.toNamed(AppRoutes.smsScreen);
                        }
                       );
@@ -181,8 +181,15 @@ int selectorCategory = 0;
                   paddingRight: 12,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color:AppColors.b5),
-                    color: selectorCategory == index ? AppColors.whiteColor:AppColors.themeColor
+                     // border: Border.all(color:AppColors.b1.withOpacity(0.25),width: 1),
+                    color: selectorCategory == index ? AppColors.whiteColor:AppColors.themeColor,
+                    boxShadow: [
+                      BoxShadow(
+                         blurRadius: 4,
+                        color: AppColors.b1.withOpacity(0.25)
+                      )
+                    ]
+                    
                   ),
                 );
             },
@@ -190,6 +197,7 @@ int selectorCategory = 0;
           ],
         ),
       ) ,
+
     );
   }
 }

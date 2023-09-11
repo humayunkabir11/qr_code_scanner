@@ -34,7 +34,7 @@ class _SelectColorSectionState extends State<SelectColorSection> {
         SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child:  Row(
-                children: List.generate(colors.length, (index) => GestureDetector(
+                children: List.generate(colors.length, (index) =>   GestureDetector(
                   onTap: (){
                     setState(() {
                       selectedColor = index;
@@ -42,14 +42,25 @@ class _SelectColorSectionState extends State<SelectColorSection> {
                   },
                   child: Container(
                     margin: const EdgeInsetsDirectional.only(end: 8),
-                    height: 30,
-                    width: 30,
-                    decoration:  BoxDecoration(
-                      color:  colors[index],
-                      shape: BoxShape.circle,
+                      height: 40,
+                   decoration: BoxDecoration(
+                     // border: Border.all(width: 2,color: AppColors.themeColor)
+                     border: Border(
+                       bottom: BorderSide(width: 2, color: selectedColor==index? colors[index]:AppColors.whiteColor),
+                     ),
+                   ),
+                    child: Container(
+
+                      margin: const EdgeInsetsDirectional.only(end: 0),
+                      height: 30,
+                      width: 30,
+                      decoration:  BoxDecoration(
+                        color:  colors[index],
+                        shape: BoxShape.circle,
+                      ),
                     ),
                   ),
-                )
+                ),
                 )
             )
         ),
@@ -68,7 +79,10 @@ class _SelectColorSectionState extends State<SelectColorSection> {
             // Image.asset(AppImages.qr2),
             Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: List.generate(qrImages.length, (index) =>CustomImage(imageSrc: qrImages[index],imageType: ImageType.svg,size:60,imageColor: colors[selectedColor],),)
+
+                children: List.generate(qrImages.length, (index) =>
+
+                    CustomImage(imageSrc: qrImages[index],imageType: ImageType.svg,size:60,imageColor: colors[selectedColor],),)
 
               // CustomImage(imageSrc: AppImages.qrTwoImage,imageType: ImageType.svg,),
               // CustomImage(imageSrc: AppImages.qrThreeImage,imageType: ImageType.svg,),

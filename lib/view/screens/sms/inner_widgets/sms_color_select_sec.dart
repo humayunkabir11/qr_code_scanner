@@ -5,14 +5,14 @@ import 'package:qr_code_scanner/utils/app_strings.dart';
 import 'package:qr_code_scanner/view/widgets/image/custom_image.dart';
 import 'package:qr_code_scanner/view/widgets/text/custom_text.dart';
 
-class ContactSelectColors extends StatefulWidget {
-  const ContactSelectColors({super.key});
+class SmsSelectColorSec extends StatefulWidget {
+  const SmsSelectColorSec({super.key});
 
   @override
-  State<ContactSelectColors> createState() => _SelectColorSectionState();
+  State<SmsSelectColorSec> createState() => _SelectColorSectionState();
 }
 
-class _SelectColorSectionState extends State<ContactSelectColors> {
+class _SelectColorSectionState extends State<SmsSelectColorSec> {
   List<dynamic> colors = [
     AppColors.b1,AppColors.themeColor,AppColors.red,AppColors.yellow,AppColors.blue,AppColors.violate,AppColors.majenda,AppColors.blueSky,AppColors.rainBo,
   ];

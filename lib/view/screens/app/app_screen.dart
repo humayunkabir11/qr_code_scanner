@@ -4,6 +4,7 @@ import 'package:get/get_navigation/get_navigation.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:qr_code_scanner/utils/app_colors.dart';
 import 'package:qr_code_scanner/utils/app_strings.dart';
+import 'package:qr_code_scanner/view/screens/app/inner_widgets/app_select_color_section.dart';
 import 'package:qr_code_scanner/view/screens/bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:qr_code_scanner/view/screens/urls/inner_widgets/select_color_sections.dart';
 import 'package:qr_code_scanner/view/widgets/appbar/app_bar.dart';
@@ -11,14 +12,14 @@ import 'package:qr_code_scanner/view/widgets/button/custom_button.dart';
 import 'package:qr_code_scanner/view/widgets/text/custom_text.dart';
 import 'package:qr_code_scanner/view/widgets/text_field/custom_text_field.dart';
 
-class UrlsScreen extends StatefulWidget {
-  const UrlsScreen({super.key});
+class AppScreen extends StatefulWidget {
+  const AppScreen({super.key});
 
   @override
-  State<UrlsScreen> createState() => _SelectColorSectionsState();
+  State<AppScreen> createState() => _SelectColorSectionsState();
 }
 
-class _SelectColorSectionsState extends State<UrlsScreen> {
+class _SelectColorSectionsState extends State<AppScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -30,15 +31,15 @@ class _SelectColorSectionsState extends State<UrlsScreen> {
                 onTap:(){
                   Get.back();
                 },
-                child: Icon(Icons.arrow_back_outlined)),
-            CustomText(
-              text: "URLS",
+                child: const Icon(Icons.arrow_back_outlined)),
+            const CustomText(
+              text: "App",
               color:AppColors.themeColor,
               fontSize: 24,
               fontWeight: FontWeight.w600,
               textAlign: TextAlign.center,
             ),
-            SizedBox()
+            const SizedBox()
           ],
         ),
       ),
@@ -50,7 +51,7 @@ class _SelectColorSectionsState extends State<UrlsScreen> {
             CustomTextField(
               isPrefixIcon: false,
               fillColor: Colors.transparent,
-              hintText: AppStrings.enterURL1,
+              hintText: AppStrings.androidAppURL,
               hintStyle:GoogleFonts.poppins(
                 color: AppColors.b5,
                 fontSize: 18,
@@ -64,7 +65,7 @@ class _SelectColorSectionsState extends State<UrlsScreen> {
               fieldBorderRadius: 0,
               isPrefixIcon: false,
               fillColor: Colors.transparent,
-              hintText: AppStrings.enterURL2,
+              hintText: AppStrings.iOSAppURL,
               hintStyle:GoogleFonts.poppins(
                 color: AppColors.b5,
                 fontSize: 18,
@@ -77,7 +78,7 @@ class _SelectColorSectionsState extends State<UrlsScreen> {
             CustomTextField(
               isPrefixIcon: false,
               fillColor: Colors.transparent,
-              hintText: AppStrings.enterURL3,
+              hintText: AppStrings.scanURLForOtherDevice,
               hintStyle:GoogleFonts.poppins(
                 color: AppColors.b5,
                 fontSize: 18,
@@ -93,11 +94,11 @@ class _SelectColorSectionsState extends State<UrlsScreen> {
               fontSize: 14,
               fontWeight: FontWeight.w400,
             ),
-            SizedBox(height: 16,),
+            const SizedBox(height: 16,),
 
-            const SelectColorSections(),
+            const AppSelectColorSections(),
 
-             const SizedBox(height: 50,),
+            const SizedBox(height: 50,),
             Center(
               child: CustomButton(
                   onPressed: (){

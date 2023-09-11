@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:qr_code_scanner/core/app_route/app_route.dart';
 import 'package:qr_code_scanner/utils/app_colors.dart';
 import 'package:qr_code_scanner/utils/app_strings.dart';
 import 'package:qr_code_scanner/view/screens/bottom_nav_bar/bottom_nav_bar.dart';
-import 'package:qr_code_scanner/view/screens/url/inner_widgets/select_color_section.dart';
+import 'package:qr_code_scanner/view/screens/phone/inner_widgets/select_color_section.dart';
 import 'package:qr_code_scanner/view/widgets/appbar/app_bar.dart';
 import 'package:qr_code_scanner/view/widgets/button/custom_button.dart';
 import 'package:qr_code_scanner/view/widgets/text/custom_text.dart';
 import 'package:qr_code_scanner/view/widgets/text_field/custom_text_field.dart';
-class UrlScreen extends StatefulWidget {
-  const UrlScreen({super.key});
+class PhoneScreen extends StatefulWidget {
+  const PhoneScreen({super.key});
   @override
-  State<UrlScreen> createState() => _SrlScreenState();
+  State<PhoneScreen> createState() => _SrlScreenState();
 }
-class _SrlScreenState extends State<UrlScreen> {
+class _SrlScreenState extends State<PhoneScreen> {
   @override
   Widget build(BuildContext context) {
     return  SafeArea(
@@ -31,11 +30,11 @@ class _SrlScreenState extends State<UrlScreen> {
                    },
                    child: const Icon(Icons.arrow_back_outlined)),
                const CustomText(
-                 text: "URL",
-                 textAlign: TextAlign.center,
+                 text: "Phone",
                  color:AppColors.themeColor,
                  fontSize: 24,
                  fontWeight: FontWeight.w600,
+                 textAlign: TextAlign.center,
                ),
              const SizedBox()
              ],
@@ -49,7 +48,7 @@ class _SrlScreenState extends State<UrlScreen> {
               CustomTextField(
                 isPrefixIcon: false,
                 fillColor: Colors.transparent,
-                hintText: AppStrings.enterURL,
+                hintText: AppStrings.enterPhoneNumber,
                 hintStyle:GoogleFonts.poppins(
                   color: AppColors.b5,
                   fontSize: 18,
@@ -66,12 +65,11 @@ class _SrlScreenState extends State<UrlScreen> {
                 fontWeight: FontWeight.w400,
               ),
                const SizedBox(height: 24,),
-               const SelectColorSection(),
+              const PhoneSelectColorSection(),
               const SizedBox(height: 50,),
               Center(
                 child: CustomButton(
                     onPressed: (){
-                      Get.toNamed(AppRoutes.qrCodeScreen);
                     },
                   textAlign: TextAlign.center,
                   buttonRadius: 50,
@@ -88,6 +86,7 @@ class _SrlScreenState extends State<UrlScreen> {
         ),
         // bottomNavigationBar:const CustomNavBar(currentIndex: 1) ,
       ),
+
     );
   }
 }
