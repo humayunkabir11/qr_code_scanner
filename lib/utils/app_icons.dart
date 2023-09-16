@@ -21,4 +21,6 @@ class AppIcons{
   static const String textIcon="$basePath/text_icon.svg";
   static const String urlIcon="$basePath/url_icon.svg";
   static const String logoIcon="$basePath/logo.svg";
+  static const String personIcon="$basePath/person.svg";
+  static const String colorPalatte="$basePath/colorPalatte.svg";
 }

@@ -1,4 +1,6 @@
 import 'dart:ui';
+
+import 'package:flutter/cupertino.dart';
 class AppColors{
   static const themeColor = Color(0xff0CAD80);
   static const whiteColor = Color(0xffffffff);
@@ -12,4 +14,11 @@ class AppColors{
   static const blueSky = Color(0xff00E0FF);
   static const rainBo = Color(0xffe81416);
   static const b2 = Color(0xff5A5A5A);
+  static const LinearGradient myGradient = const LinearGradient(
+    colors: [Color(0xFF3366FF), Color(0xFF00CCFF)],
+    stops: [0.0, 1.0], // Color stops, where 0.0 is the beginning and 1.0 is the end
+    begin: Alignment.topLeft, // Start the gradient from the top-left corner
+    end: Alignment.bottomRight, // End the gradient at the bottom-right corner
+  );
+
 }

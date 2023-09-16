@@ -56,7 +56,7 @@ class _CustomNavBarState extends State<CustomNavBar> {
           text: "Profile",
           index: 3,
           selectedIndex: selectedIndex,
-          image: AppIcons.phoneIcon,
+          image: AppIcons.personIcon,
       ),
     ];
     return SafeArea(
